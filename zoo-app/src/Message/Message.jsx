@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Modal from "react-modal";
 import styles from "./styles.module.css"
 
@@ -25,9 +25,18 @@ const customStyles = {
 
 Modal.setAppElement('#root');
 
-const Message = ({ openMessage, closeChat, animal }) => {
+const Message = ({ openMessage, closeChat, animal, sendMessage, messages }) => {
+
+    const messageRef = useRef();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        sendMessage(messageRef.current.value);
+        messageRef.current.value = "";
+    };
+
     return(
-        <Modal isOpen={ openMessage }  style={ customStyles } closeTimeoutMS={100}>
+        <Modal isOpen={ openMessage }  style={ customStyles } closeTimeoutMS={ 100 }>
             <div className={styles.container}>
                 <span className={styles.title}>
                     <button onClick={ closeChat }>
@@ -38,10 +47,12 @@ const Message = ({ openMessage, closeChat, animal }) => {
                 </span>
                 
                 <div className={styles.body}>
-
+                    {messages.map((msg) => {
+                        return <p>{msg}</p>
+                    })}
                 </div>
-                <form id="form-chat" className={styles.footer}>
-                    <textarea placeholder="Nuevo mensaje..." rows="1" wrap="soft"></textarea>
+                <form id="form-chat" className={styles.footer} onSubmit={ handleSubmit }>
+                    <textarea ref={ messageRef } placeholder="Nuevo mensaje..." rows="1" wrap="soft"></textarea>
                     <button type="submit" className={styles.send}>
                         <i className="fa fa-paper-plane"></i>
                     </button>

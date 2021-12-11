@@ -13,7 +13,7 @@ class Animal {
 
 };
 
-class Lion extends Animal {
+export class Lion extends Animal {
 
     constructor() {
         super("roar");
@@ -22,7 +22,7 @@ class Lion extends Animal {
 
 };
 
-class Tiger extends Animal {
+export class Tiger extends Animal {
 
     constructor() {
         super("grrr");
@@ -31,7 +31,7 @@ class Tiger extends Animal {
 
 };
 
-class Dog extends Animal {
+export class Dog extends Animal {
 
     constructor() {
         super("woff");
@@ -40,7 +40,7 @@ class Dog extends Animal {
 
 };
 
-class Cat extends Animal {
+export class Cat extends Animal {
 
     constructor() {
         super("meow");
@@ -49,7 +49,7 @@ class Cat extends Animal {
 
 };
 
-class Elephant extends Animal {
+export class Elephant extends Animal {
 
     constructor() {
         super("bruuuu");
@@ -58,7 +58,7 @@ class Elephant extends Animal {
 
 };
 
-class Owl extends Animal {
+export class Owl extends Animal {
 
     constructor() {
         super("hu huu");
@@ -67,10 +67,28 @@ class Owl extends Animal {
 
 };
 
-class Monkey extends Animal {
+export class Monkey extends Animal {
 
     constructor() {
         super("hu hu haha");
+        this.patience = Math.random()*100; //Just for fun
+    };
+
+};
+
+export class Parrot extends Animal {
+
+    constructor() {
+        super("quiquqi");
+        this.patience = Math.random()*100; //Just for fun
+    };
+
+};
+
+export class Turtle extends Animal {
+
+    constructor() {
+        super("aghahhh");
         this.patience = Math.random()*100; //Just for fun
     };
 
