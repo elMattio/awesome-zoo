@@ -17,7 +17,6 @@ export class Lion extends Animal {
 
     constructor() {
         super("roar");
-        this.patience = Math.random()*100; //Just for fun
     };
 
 };
@@ -26,7 +25,6 @@ export class Tiger extends Animal {
 
     constructor() {
         super("grrr");
-        this.patience = Math.random()*100; //Just for fun
     };
 
 };
@@ -35,7 +33,6 @@ export class Dog extends Animal {
 
     constructor() {
         super("woff");
-        this.patience = Math.random()*100; //Just for fun
     };
 
 };
@@ -44,7 +41,6 @@ export class Cat extends Animal {
 
     constructor() {
         super("meow");
-        this.patience = Math.random()*100; //Just for fun
     };
 
 };
@@ -53,7 +49,6 @@ export class Elephant extends Animal {
 
     constructor() {
         super("bruuuu");
-        this.patience = Math.random()*100; //Just for fun
     };
 
 };
@@ -62,7 +57,6 @@ export class Owl extends Animal {
 
     constructor() {
         super("hu huu");
-        this.patience = Math.random()*100; //Just for fun
     };
 
 };
@@ -71,7 +65,6 @@ export class Monkey extends Animal {
 
     constructor() {
         super("hu hu haha");
-        this.patience = Math.random()*100; //Just for fun
     };
 
 };
@@ -80,7 +73,6 @@ export class Parrot extends Animal {
 
     constructor() {
         super("quiquqi");
-        this.patience = Math.random()*100; //Just for fun
     };
 
 };
@@ -89,7 +81,6 @@ export class Turtle extends Animal {
 
     constructor() {
         super("aghahhh");
-        this.patience = Math.random()*100; //Just for fun
     };
 
 };
