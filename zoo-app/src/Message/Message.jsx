@@ -53,10 +53,10 @@ const Message = ({ openMessage, closeChat, animal, sendMessage, messages }) => {
                 <ul ref={ ulRef } className={styles.body}>
                     {messages.map((msg, i) => {
                         return(
-                            <li key={"msg"+i} class={i%2===0?styles.bubbleContainerRight:styles.bubbleContainerLeft}>
-                                <div class={i%2===0?styles.bubbleRight:styles.bubbleLeft}>
+                            <li key={"msg"+i} className={i%2===0?styles.bubbleContainerRight:styles.bubbleContainerLeft}>
+                                <div className={i%2===0?styles.bubbleRight:styles.bubbleLeft}>
                                     {msg}
-                                    <div class={i%2===0?styles.arrowRight:styles.arrowLeft}></div>
+                                    <div className={i%2===0?styles.arrowRight:styles.arrowLeft}></div>
                                 </div>
                             </li>
                         )
