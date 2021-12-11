@@ -55,6 +55,8 @@
 .body {
     height: 100%;
     overflow-y: auto;
+    padding: 20px 0 10px;
+    margin:0;
 }
 
 .footer {
@@ -97,6 +99,87 @@
 .send i {
     color: #fff;
     font-size: 1.8em;
+}
+
+.bubbleLeft {
+    list-style: none;
+    margin:15px 0;
+    width: 100%;
+    padding: .5em 1em;
+    line-height: 1.4em;
+    padding: 20px;
+    background-color: #fff;
+    position: relative;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+    text-align: left;
+    display: inline-block; 
+}
+
+.bubbleContainerLeft {
+    width: 75%;
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    vertical-align: top;
+    display: inline-block; 
+}
+
+.arrowLeft {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -20px;
+    top: 8px;
+    height: 0;
+    width: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid #fff; 
+}
+
+.bubbleContainerRight {
+    width: 75%;
+    display: block;
+    position: relative;
+    padding-right:30px;
+    vertical-align: top;
+    display: inline-block;
+    float: right;
+}
+
+.bubbleRight {
+    list-style: none;
+    margin: 5px 0;
+    width: 100%;
+    padding: .5em 1em;
+    line-height: 1.4em;
+    padding: 20px;
+    background-color: #ecf0f1;
+    position: relative;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+    text-align: right;
+    display: inline-block; 
+}
+
+.arrowRight {
+    content: '';
+    display: block;
+    position: absolute;
+    right: -20px;
+    top: 8px;
+    height: 0;
+    width: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #ecf0f1;
 }
 
 @media (max-width: 600px) {

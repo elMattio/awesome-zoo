@@ -28,11 +28,15 @@ Modal.setAppElement('#root');
 const Message = ({ openMessage, closeChat, animal, sendMessage, messages }) => {
 
     const messageRef = useRef();
+    const ulRef = useRef();
 
     const handleSubmit = (e) => {
         e.preventDefault();
         sendMessage(messageRef.current.value);
         messageRef.current.value = "";
+        setTimeout(() => {
+            ulRef.current.scrollTop = "9999"
+        }, 50)
     };
 
     return(
@@ -46,11 +50,18 @@ const Message = ({ openMessage, closeChat, animal, sendMessage, messages }) => {
                     <span>@{animal.name}</span>
                 </span>
                 
-                <div className={styles.body}>
-                    {messages.map((msg) => {
-                        return <p>{msg}</p>
+                <ul ref={ ulRef } className={styles.body}>
+                    {messages.map((msg, i) => {
+                        return(
+                            <li key={"msg"+i} class={i%2===0?styles.bubbleContainerRight:styles.bubbleContainerLeft}>
+                                <div class={i%2===0?styles.bubbleRight:styles.bubbleLeft}>
+                                    {msg}
+                                    <div class={i%2===0?styles.arrowRight:styles.arrowLeft}></div>
+                                </div>
+                            </li>
+                        )
                     })}
-                </div>
+                </ul>
                 <form id="form-chat" className={styles.footer} onSubmit={ handleSubmit }>
                     <textarea ref={ messageRef } placeholder="Nuevo mensaje..." rows="1" wrap="soft"></textarea>
                     <button type="submit" className={styles.send}>
