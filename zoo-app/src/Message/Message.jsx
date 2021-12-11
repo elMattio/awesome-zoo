@@ -27,23 +27,25 @@ Modal.setAppElement('#root');
 
 const Message = ({ openMessage, closeChat, animal }) => {
     return(
-        <Modal isOpen={ openMessage }  style={ customStyles }>
+        <Modal isOpen={ openMessage }  style={ customStyles } closeTimeoutMS={100}>
             <div className={styles.container}>
                 <span className={styles.title}>
+                    <button onClick={ closeChat }>
+                        <i className="fa fa-arrow-left"></i>
+                    </button>
                     <img src={animal.img} alt="" className={styles.avatar}/>
                     <span>@{animal.name}</span>
                 </span>
                 
                 <div className={styles.body}>
-                    body
-                    <button onClick={closeChat}>cerrar</button>
+
                 </div>
-                <div className={styles.footer}>
+                <form id="form-chat" className={styles.footer}>
                     <textarea placeholder="Nuevo mensaje..." rows="1" wrap="soft"></textarea>
-                    <button className={styles.send}>
-                        <i class="fa fa-paper-plane"></i>
+                    <button type="submit" className={styles.send}>
+                        <i className="fa fa-paper-plane"></i>
                     </button>
-                </div>
+                </form>
             </div>
         </Modal>
     )
