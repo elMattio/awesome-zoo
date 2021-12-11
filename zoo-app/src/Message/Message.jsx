@@ -32,11 +32,16 @@ const Message = ({ openMessage, closeChat, animal, sendMessage, messages }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if(messageRef.current.value === "") return;
+        if(!(/\S/.test(messageRef.current.value))) return;
         sendMessage(messageRef.current.value);
         messageRef.current.value = "";
         setTimeout(() => {
             ulRef.current.scrollTop = "9999"
-        }, 50)
+        }, 10)
+        setTimeout(() => {
+            ulRef.current.scrollTop = "9999"
+        }, 460)
     };
 
     return(

@@ -2,7 +2,7 @@ import Chats from "./Chats/Chats";
 import Message from "./Message/Message";
 import { animals } from "./data/index";
 import "./app.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useAnimals from "./hooks/useAnimals";
 
 const App = () =>  {
@@ -10,6 +10,7 @@ const App = () =>  {
   const [openMessage, setOpenMessage] = useState(false);
   const [selectedAnimal, setSelectedAnimal] = useState({});
   const [messages, setMessages] = useState([]);
+  const [lastMessage, setLastMessage] = useState("");
   const animal = useAnimals(selectedAnimal.name);
 
   const handleNewChat = (animal) => {
@@ -23,9 +24,16 @@ const App = () =>  {
   };
 
   const sendMessage = (newMessage) => {
-    let response = animal.speak(newMessage);
-    setMessages([...messages, newMessage, response]);
+    setMessages([...messages, newMessage]);
+    setLastMessage(`${newMessage}_____${Date.now().toString()}`);
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      let response = animal.speak(lastMessage.split("_____")[0]);
+      setMessages([...messages, response]);
+    }, 450)
+  }, [lastMessage])
 
   return (
     <div className="app-shell">
