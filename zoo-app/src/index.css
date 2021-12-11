@@ -1,3 +1,18 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-family: 'Quicksand';
+}
+
+html, body {
+  margin: 0px !important;
+  color: #768283;
+  font-size: 16px;
+  background-color: #ebebeb; 
+  width: 100%;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

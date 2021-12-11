@@ -1,0 +1,45 @@
+.avatar {
+    width: 120px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    border: 5px solid #ecf0f1;
+    position: relative; 
+}
+
+.chat {
+    display: flex;
+    flex-direction: row;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(51,51,51,.1);
+    padding-left: 15%;
+    padding-right: 10%;
+}
+
+.chat div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 5%;
+    font-size:1.5rem;
+}
+
+.chat:hover {
+    background-color: whitesmoke;
+    cursor: pointer;
+    transition: background-color .05s;
+}
+
+@media (max-width: 600px) {
+    .avatar {
+        width: 80px;
+    }
+
+    .chat {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
