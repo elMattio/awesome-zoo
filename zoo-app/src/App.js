@@ -29,9 +29,10 @@ const App = () =>  {
   };
 
   useEffect(() => {
+    if(JSON.stringify(animal) === "{}") return;
     setTimeout(() => {
       let response = animal.speak(lastMessage.split("_____")[0]);
-      setMessages([...messages, response]);
+      setMessages(m => [...m, response]);
     }, 450)
   }, [lastMessage])
 
