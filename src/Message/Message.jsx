@@ -13,8 +13,8 @@ const customStyles = {
         width:"100%",
         maxWidth:"600px",
         border:"none",
-        height:"100vh",
-        maxHeight:"100vh",
+        height:"100%",
+        maxHeight:"100%",
         backgroundColor:"#ebebeb",
         padding:"1%"
     },
