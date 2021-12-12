@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Rotunda_challenge/static/css/main.c758c501.chunk.css",
-    "main.js": "/Rotunda_challenge/static/js/main.e042a5a7.chunk.js",
-    "main.js.map": "/Rotunda_challenge/static/js/main.e042a5a7.chunk.js.map",
+    "main.css": "/Rotunda_challenge/static/css/main.5efb2465.chunk.css",
+    "main.js": "/Rotunda_challenge/static/js/main.6d3dd76d.chunk.js",
+    "main.js.map": "/Rotunda_challenge/static/js/main.6d3dd76d.chunk.js.map",
     "runtime-main.js": "/Rotunda_challenge/static/js/runtime-main.d51d2eb1.js",
     "runtime-main.js.map": "/Rotunda_challenge/static/js/runtime-main.d51d2eb1.js.map",
     "static/js/2.6ddf4830.chunk.js": "/Rotunda_challenge/static/js/2.6ddf4830.chunk.js",
     "static/js/2.6ddf4830.chunk.js.map": "/Rotunda_challenge/static/js/2.6ddf4830.chunk.js.map",
     "index.html": "/Rotunda_challenge/index.html",
-    "static/css/main.c758c501.chunk.css.map": "/Rotunda_challenge/static/css/main.c758c501.chunk.css.map",
+    "static/css/main.5efb2465.chunk.css.map": "/Rotunda_challenge/static/css/main.5efb2465.chunk.css.map",
     "static/js/2.6ddf4830.chunk.js.LICENSE.txt": "/Rotunda_challenge/static/js/2.6ddf4830.chunk.js.LICENSE.txt",
     "static/media/dog.b996d29c.jpg": "/Rotunda_challenge/static/media/dog.b996d29c.jpg",
     "static/media/elefante.ff381458.jpg": "/Rotunda_challenge/static/media/elefante.ff381458.jpg",
@@ -23,7 +23,7 @@
   "entrypoints": [
     "static/js/runtime-main.d51d2eb1.js",
     "static/js/2.6ddf4830.chunk.js",
-    "static/css/main.c758c501.chunk.css",
-    "static/js/main.e042a5a7.chunk.js"
+    "static/css/main.5efb2465.chunk.css",
+    "static/js/main.6d3dd76d.chunk.js"
   ]
 }
