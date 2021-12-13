@@ -17,8 +17,7 @@
     border-radius: 50%;
     border: 1px solid #ecf0f1;
     position: relative;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin: 0 5%
 }
 
 .title {
@@ -41,11 +40,7 @@
     background-color: #3498db;
     cursor: pointer;
     border: none;
-    padding-left: 5%;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-
+    padding: 10px 10px 10px 5%;
 }
 
 .title button i {
@@ -63,11 +58,9 @@
 
 .footer {
     width:95%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 5px auto;
     display: flex;
     flex-direction: row;
-    margin-bottom:5px;
     position: sticky;
     bottom: 0;
 }
@@ -88,7 +81,7 @@
 }
 
 .send {
-    border:none;
+    border: none;
     background-color:#2f8fcf;
     cursor: pointer;
     padding-left: 0.5em;
@@ -105,85 +98,70 @@
     font-size: 1.8em;
 }
 
-.bubbleLeft {
-    list-style: none;
-    margin:10px 0;
-    width: 100%;
-    padding: .5em 1em;
-    line-height: 1.4em;
-    padding: 20px;
-    background-color: #fff;
+.bubbleContainer {
+    width: 75%;
+    display: block;
     position: relative;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
-    border-radius: 8px;
-    text-align: left;
+    vertical-align: top;
     display: inline-block; 
 }
 
 .bubbleContainerLeft {
-    width: 75%;
-    display: block;
-    position: relative;
     padding-left: 30px;
-    vertical-align: top;
-    display: inline-block; 
-}
-
-.arrowLeft {
-    content: '';
-    display: block;
-    position: absolute;
-    left: -20px;
-    top: 8px;
-    height: 0;
-    width: 0;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-right: 20px solid #fff; 
 }
 
 .bubbleContainerRight {
-    width: 75%;
-    display: block;
-    position: relative;
     padding-right:30px;
-    vertical-align: top;
-    display: inline-block;
     float: right;
 }
 
-.bubbleRight {
+.bubble {
+    color: #000000;
     list-style: none;
-    margin: 10px 0;
-    width: 100%;
+    margin: 5px 0;
+    max-width: 100%;
+    min-width: 20%;
     padding: .5em 1em;
     line-height: 1.4em;
-    padding: 20px;
-    background-color: #ecf0f1;
     position: relative;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
     border-radius: 8px;
-    text-align: right;
     display: inline-block; 
 }
 
-.arrowRight {
+.bubbleLeft {
+    border-top-left-radius: 0;
+    background-color: #fff;
+}
+
+.bubbleRight {
+    border-top-right-radius: 0;
+    background-color: #dcf3f8;
+    float: right;
+}
+
+.arrow {
     content: '';
     display: block;
     position: absolute;
-    right: -20px;
-    top: 8px;
+    top: 0;
     height: 0;
     width: 0;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-left: 20px solid #ecf0f1;
+    border-top: 0px solid transparent;
+    border-bottom: 16px solid transparent;
+}
+
+.arrowLeft {
+    left: -15px;
+    border-right: 16px solid #fff; 
+}
+
+.arrowRight {
+    right: -15px;
+    border-left: 16px solid #dcf3f8;
 }
 
 @media (max-width: 600px) {

@@ -28,14 +28,17 @@
 
 .ReactModal__Overlay {
     opacity: 0;
-    transition: opacity 100ms ease-in-out;
+    transform: translate(0%, -15%);
+    transition: all 200ms ease-in-out;
 }
 
 .ReactModal__Overlay--after-open{
+    transform: translate(0%, 0%);
     opacity: 1;
 }
 
 .ReactModal__Overlay--before-close{
+    transform: translate(0%, -15%);
     opacity: 0;
 }
 

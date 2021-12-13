@@ -42,12 +42,15 @@ const App = () =>  {
         <span className="title"> 
               <span>Chatea con un animal !</span>
         </span>
-        <Chats animals={ animals } handleNewChat={ handleNewChat } />
+        <Chats animals={ animals } 
+          handleNewChat={ handleNewChat } 
+        />
         <Message openMessage={ openMessage } 
           closeChat={ closeChat } 
           animal={selectedAnimal} 
           sendMessage={ sendMessage }
-          messages={ messages } />
+          messages={ messages }
+        />
       </div>
     </div>
   );

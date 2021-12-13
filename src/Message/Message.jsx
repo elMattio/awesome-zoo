@@ -45,7 +45,7 @@ const Message = ({ openMessage, closeChat, animal, sendMessage, messages }) => {
     };
 
     return(
-        <Modal isOpen={ openMessage }  style={ customStyles } closeTimeoutMS={ 100 }>
+        <Modal isOpen={ openMessage }  style={ customStyles } closeTimeoutMS={ 200 }>
             <div className={styles.container}>
                 <span className={styles.title}>
                     <button onClick={ closeChat }>
@@ -57,17 +57,18 @@ const Message = ({ openMessage, closeChat, animal, sendMessage, messages }) => {
                 
                 <ul ref={ ulRef } className={styles.body}>
                     {messages.map((msg, i) => {
+                        let even = i%2===0;
                         return(
-                            <li key={"msg"+i} className={i%2===0?styles.bubbleContainerRight:styles.bubbleContainerLeft}>
-                                <div className={i%2===0?styles.bubbleRight:styles.bubbleLeft}>
+                            <li key={"msg"+i} className={[styles.bubbleContainer, even ? styles.bubbleContainerRight : styles.bubbleContainerLeft].join(" ")}>
+                                <div className={[styles.bubble, even ? styles.bubbleRight:styles.bubbleLeft].join(" ")}>
                                     {msg}
-                                    <div className={i%2===0?styles.arrowRight:styles.arrowLeft}></div>
+                                    <div className={[styles.arrow, even ? styles.arrowRight:styles.arrowLeft].join(" ")}></div>
                                 </div>
                             </li>
                         )
                     })}
                 </ul>
-                <form id="form-chat" className={styles.footer} onSubmit={ handleSubmit }>
+                <form className={styles.footer} onSubmit={ handleSubmit }>
                     <textarea ref={ messageRef } placeholder="Nuevo mensaje..." rows="1" wrap="soft"></textarea>
                     <button type="submit" className={styles.send}>
                         <i className="fa fa-paper-plane"></i>
