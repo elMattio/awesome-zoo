@@ -21,7 +21,7 @@
     flex-direction: row;
     align-items: center;
     margin-left: 5%;
-    font-size: 1.5rem;
+    font-size: 1.5em;
 }
 
 .chat:hover {
@@ -38,5 +38,9 @@
     .chat {
         padding-left: 10%;
         padding-right: 10%;
+    }
+
+    .chat div {
+        font-size: 1.3em;
     }
 }

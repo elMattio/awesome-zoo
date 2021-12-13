@@ -1,0 +1,75 @@
+.container {
+    margin: 0;
+    background-color: #fff;
+    height: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.title {
+    font-family: "Lato";
+    font-size: 2em;
+    text-align: center;
+    color: #fff;
+    padding: 30px 0;
+    margin: 0 0 5%;
+    text-shadow: #2084c7 1px 1px 0;
+    background-color: #3498db;
+    width: 100%;
+}
+
+.btn {
+    padding: 10px 35px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 1.3em;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 10% 0 5%;
+    width: 75%;
+    max-width: 350px;
+}
+
+.btn:hover  {
+    background-color: #0e5f96;
+}
+
+.btn:active {
+    background-color: #abd9f8;
+}
+
+.container p {
+    font-size: 1.5em;
+    padding: 0 50px;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.container img {
+    width: 250px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    border: 2px solid #3498db;
+    position: relative;
+    margin: 5%
+    
+}
+
+@media (max-width: 600px) {
+    .container p {
+        font-size: 1.3em;
+        padding: 0 30px;
+    }
+
+    .container img {
+        width: 180px;
+    }
+}
